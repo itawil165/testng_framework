@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utilities.Driver;
 
-public class _01_Apple_Test {
+public class _01_AppleTest {
 
     // Declare your driver
     WebDriver driver;

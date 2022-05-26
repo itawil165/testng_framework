@@ -1,8 +1,11 @@
 package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,16 +20,27 @@ public class Driver {
 
     // 3. Get Driver and quit driver Method
     public static WebDriver getDriver(){
-        if(driver == null){
-            // Telling your system where your chrome driver is located
-            // System.setProperty("webdriver.chrome.driver", "C:\\Users\\Suma\\IdeaProjects\\selenium_intro\\chromedriver.exe");
+        if (driver == null){
+            String browser = "chrome"; // define which browser you will run your test in
 
-            WebDriverManager.chromedriver().setup();
-
-            // Create the object of the web browser that you are automating
-            driver = new ChromeDriver();
+            switch (browser){
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    break;
+                case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver();
+                    break;
+                case "safari":
+                    WebDriverManager.getInstance(SafariDriver.class).setup();
+                    driver = new SafariDriver();
+                    break;
+                default:
+                    throw new NotFoundException("Browser IS NOT DEFINED properly!!!");
+            }
             driver.manage().window().maximize();
-            //waiting only that web element to be EXISTED
+            // waits for web element to exist
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
         return driver;
@@ -34,10 +48,10 @@ public class Driver {
 
     public static void quitDriver(){
 //        // delays quit by X seconds
-//        try{
+//        try {
 //            Thread.sleep(3000);
 //        }
-//        catch (Exception e){
+//        catch (Exception e) {
 //            e.printStackTrace();
 //        }
         if(driver != null){
