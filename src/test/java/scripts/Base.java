@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pages.FacebookPage;
 import pages.HeroAppPage;
 import utilities.Driver;
 
@@ -18,6 +19,7 @@ public class Base {
     Wait fluentWait;
 
     HeroAppPage heroAppPage;
+    FacebookPage facebookPage;
 
     @BeforeMethod
     public void setup(){
@@ -26,6 +28,7 @@ public class Base {
         fluentWait = new FluentWait(driver).withTimeout(30, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS).ignoring(Exception.class);
 
         heroAppPage = new HeroAppPage(driver);
+        facebookPage = new FacebookPage(driver);
 
     }
 

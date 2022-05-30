@@ -13,11 +13,11 @@ public class FacebookPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy (xpath = "//*[@id=\"login_link\"]/div[3]/a")
-    public WebElement createAccountLink;
+    @FindBy (css = "a[id^='u_0_2_']")
+    public WebElement createNewAccountLink;
 
     @FindBy (className = "_8esa")
-    public List<WebElement> radioButtons;
+    public List<WebElement> genderRadioButtons;
 
-    
+
 }
