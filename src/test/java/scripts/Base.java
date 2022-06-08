@@ -27,6 +27,7 @@ public class Base {
 //        ExpediaPage expediaPage;
         RediffHomePage rediffHomePage;
         AmazonHomePage amazonHomePage;
+        TGHomePage tgHomePage;
 
         @BeforeMethod
         public void setup(){
@@ -43,6 +44,7 @@ public class Base {
 //            expediaPage = new ExpediaPage(driver);
             rediffHomePage = new RediffHomePage(driver);
             amazonHomePage = new AmazonHomePage(driver);
+            tgHomePage = new TGHomePage(driver);
 
     }
 
