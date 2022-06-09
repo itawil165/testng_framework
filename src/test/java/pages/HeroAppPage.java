@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -36,6 +37,27 @@ public class HeroAppPage {
 
     @FindBy(xpath = "//h3")
     public WebElement iFrameHeading3;
+
+    @FindBy(linkText = "Click Here")
+    public WebElement openNewWindowLink;
+
+    @FindBy(xpath = "//h3")
+    public WebElement openNewWindowHeading;
+
+    @FindBy(xpath = "//h3")
+    public WebElement newWindowHeading;
+
+    @FindBy(id = "file-upload")
+    public WebElement chooseFileInputBox;
+
+    @FindBy(id = "file-submit")
+    public WebElement uploadFileButton;
+
+    @FindBy(xpath = "//h3")
+    public WebElement fileUploaded;
+
+    @FindBy(id = "uploaded-files")
+    public WebElement uploadedFileText;
 
     public void clickOnLink (String linkText) {
         for (WebElement link : links) {
