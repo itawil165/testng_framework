@@ -9,7 +9,7 @@ import java.util.List;
 
 public class RediffHomePage {
 
-    public RediffHomePage(WebDriver driver){
+    public RediffHomePage (WebDriver driver){
         PageFactory.initElements(driver, this);
     }
 

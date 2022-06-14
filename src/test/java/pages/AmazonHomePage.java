@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AmazonHomePage {
 
-    public AmazonHomePage(WebDriver driver){
+    public AmazonHomePage (WebDriver driver){
         PageFactory.initElements(driver, this);
     }
 

@@ -5,16 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class TGHomePage {
+public class TGApplicationPage {
 
-    public TGHomePage(WebDriver driver){
+    public TGApplicationPage (WebDriver driver){
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "dataItem-kuiqff9g-comp-kixnxkbc")
-    public WebElement faceBookIcon;
-
-    @FindBy(css = "#comp-kvjohd5t5>a")
-    public WebElement registerForIntroLink;
+    @FindBy(xpath = "//div[@id='comp-kh9s3kyz3']//span/span")
+    public WebElement heading1;
 }
-
