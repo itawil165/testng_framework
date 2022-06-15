@@ -33,10 +33,8 @@ public class _07_DropdownTest extends Base {
         facebookPage.emailReEnterInputBox.sendKeys("johndoe55555@gmail.com");
         facebookPage.passwordInputBox.sendKeys("abcd1234");
 
-//        // To be able to select an option from dropdown we need an instance of Select class
+//        // Select month as April
 //        Select monthSelector = new Select(facebookPage.monthDropdown);
-//        monthSelector.selectByValue("4"); // selection by value
-//        monthSelector.selectByVisibleText("Apr"); // selection by visible text
 //        monthSelector.selectByIndex(3); // selection by index - index starts from zero
 
         DropdownHandler.selectOptionByIndex(facebookPage.monthDropdown, 3);
@@ -44,12 +42,14 @@ public class _07_DropdownTest extends Base {
 //        // Select day as 1
 //        Select daySelector = new Select(facebookPage.dayDropdown);
 //        daySelector.selectByVisibleText("1");
-//        DropdownHandler.selectOptionByVisibleText(facebookPage.dayDropdown, "1");
+
+        DropdownHandler.selectOptionByVisibleText(facebookPage.dayDropdown, "1");
 //
 //        // Select year as 1990
 //        Select yearSelector = new Select(facebookPage.yearDropdown);
 //        yearSelector.selectByValue("1990");
-//        DropdownHandler.selectOptionByValue(facebookPage.yearDropdown, "1990");
+
+        DropdownHandler.selectOptionByValue(facebookPage.yearDropdown, "1990");
 
         facebookPage.genderRadioButtons.get(1).click();
         facebookPage.signUpButton.click();
@@ -75,8 +75,9 @@ public class _07_DropdownTest extends Base {
         expediaPage.moreTravelDropdown.click();
         expediaPage.flights.click();
 
-        //Manual captcha solution
-        //Waiter.pause(60);
+        // Manual captcha solution
+        Waiter.pause(10);
+
         expediaPage.flightTypesDropdown.click();
         expediaPage.flightOptions.get(1).click();
 
