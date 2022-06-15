@@ -168,7 +168,7 @@ public class _12_ActionsClass extends Base{
                 .perform();
 
         Waiter.pause(1);
-        Assert.assertEquals(googleSearchPage.searchInputBox.getAttribute("value"), "TECHGLOBALTECHGLOBAL");
+        Assert.assertEquals(googleSearchPage.searchInputBox.getAttribute("value"), "TECHGLOBALacv");
     }
 
     /*
