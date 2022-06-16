@@ -3,7 +3,6 @@ package scripts;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.Waiter;
 
 public class _06_RadioButtonTest extends Base {
 
@@ -22,9 +21,9 @@ public class _06_RadioButtonTest extends Base {
         facebookPage.createNewAccountLink.click();
 
         for (WebElement element : facebookPage.genderRadioButtons) {
-            Assert.assertTrue(element.isDisplayed());
-            Assert.assertTrue(element.isEnabled());
-            Assert.assertFalse(element.isSelected());
+            softAssert.assertTrue(element.isDisplayed());
+            softAssert.assertTrue(element.isEnabled());
+            softAssert.assertFalse(element.isSelected());
         }
 
         facebookPage.genderRadioButtons.get(0).click();
