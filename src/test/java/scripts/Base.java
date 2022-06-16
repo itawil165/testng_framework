@@ -56,7 +56,8 @@ public class Base {
 
     @AfterMethod
     public void teardown() {
-        Driver.quitDriver();
+            softAssert.assertAll();
+            Driver.quitDriver();
     }
 }
 
