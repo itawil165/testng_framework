@@ -149,6 +149,7 @@ public class _12_ActionsClass extends Base{
 
     @Test(priority = 7, description = "Actions | key down and key up")
     public void practiceKeyDownAndKeyUp() {
+
         driver.get("https://www.google.com/");
 
 //        googleSearchPage.searchInputBox.sendKeys("TECHGLOBALacv");

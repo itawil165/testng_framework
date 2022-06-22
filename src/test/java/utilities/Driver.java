@@ -47,13 +47,7 @@ public class Driver {
     }
 
     public static void quitDriver(){
-//        // delays quit by X seconds
-//        try {
-//            Thread.sleep(3000);
-//        }
-//        catch (Exception e) {
-//            e.printStackTrace();
-//        }
+
         if(driver != null){
             driver.manage().deleteAllCookies();
             driver.quit();
