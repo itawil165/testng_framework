@@ -68,8 +68,8 @@ public class HeroAppPage {
     }
 
     public void clickOnAlertButton(String buttonText){
-        for(WebElement element: alertButtons){
-            if(element.getText().equals(buttonText)){
+        for (WebElement element: alertButtons){
+            if (element.getText().equals(buttonText)){
                 element.click();
                 break;
             }

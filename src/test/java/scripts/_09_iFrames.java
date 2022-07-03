@@ -45,7 +45,7 @@ public class _09_iFrames extends Base {
 //        driver.switchTo().frame(0);
 //        driver.switchTo().frame("moneyiframe");
 
-        for(WebElement element : rediffHomePage.moneyCells){
+        for (WebElement element : rediffHomePage.moneyCells){
             Assert.assertTrue(element.isDisplayed());
         }
     }
